@@ -12,6 +12,7 @@ import { AuthService } from '../services/auth-service.tsx';
 import { ToastServices } from '../utils/toast-services.tsx';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
+import './styles/login-style.scss'
 
 export const Login = () => {
 const [checked, setChecked] = React.useState(true);
@@ -39,12 +40,10 @@ const onSubmit = () => {
 return (
   <div style={{ padding: 30 }}>
     <Paper>
-      <Grid
-        container
-        spacing={3}
-        direction={'column'}
-        justify={'center'}
-        alignItems={'center'}
+      <Grid className={"login"}
+         container
+         spacing={3}
+         direction={'column'}
       >
         <Grid item xs={12}>
           <TextField label="Username" 

@@ -5,9 +5,7 @@ import { ToastServices } from '../utils/toast-services.tsx';
 import { useEffect, useState } from 'react';
 import { Button } from '@material-ui/core';
 import { useNavigate } from 'react-router';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-
+import "./styles/products-style.scss"
 export const Products = () => {
 const columns: GridColDef[] = [
   { field: 'name', headerName: 'Product Name', width: 180 },
@@ -34,8 +32,8 @@ const columns: GridColDef[] = [
   }, []);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <div style={{justifyContent: "end", alignItems: "end", display: "flex"}}>
+    <div className={"div"}>
+      <div className={"button"}>
        <Button variant="contained" 
        onClick={() => backToLogin() } 
        >Return to login
